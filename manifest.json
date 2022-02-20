@@ -4,7 +4,9 @@
   "version": "1.0",
   "description": "Configurable Password Generator",
   "homepage_url": "https://github.com/orange-puff/password-generator",
-  "icons": {},
+  "icons": {
+    "48": "icons/password-generator-icon-48.png"
+  },
   "permissions": [
     "storage",
     "<all_urls>",
@@ -12,7 +14,8 @@
   ],
   "browser_action": {
     "default_title": "Password Generator",
-    "default_popup": "popup/password-generator.html"
+    "default_popup": "popup/password-generator.html",
+    "default_icon": "icons/password-generator-icon-48.png"
   },
   "content_scripts": [
     {
