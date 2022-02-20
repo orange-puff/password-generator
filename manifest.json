@@ -7,7 +7,8 @@
   "icons": {},
   "permissions": [
     "storage",
-    "<all_urls>"
+    "<all_urls>",
+    "clipboardWrite"
   ],
   "browser_action": {
     "default_title": "Password Generator",
@@ -22,5 +23,8 @@
         "content_scripts/key-handler.js"
       ]
     }
-  ]
+  ],
+  "background": {
+    "page": "background/background-page.html"
+  }
 }

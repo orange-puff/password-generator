@@ -7,18 +7,7 @@ import { generatePassword } from '../utils/password-generator-engine.js';
 */
 function listen() {
     function getPassword() {
-        browser.storage.local.get("storage")
-            .then(res => {
-                let password = '';
-                if (Object.keys(res).length === 0) {
-                    password = generatePassword(true, true, true, true);
-                }
-                else {
-                    password = generatePassword(res.storage[KEYS[0]], res.storage[KEYS[1]], res.storage[KEYS[2]], res.storage[KEYS[3]]);
-                }
-                console.log(password);
-                navigator.clipboard.writeText(password);
-            });
+        generatePassword();
     }
 
     document.addEventListener("click", (e) => {
